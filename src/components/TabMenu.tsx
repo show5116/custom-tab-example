@@ -14,6 +14,7 @@ const TabMenu = () => {
             <div className='tabList'>
                 {tabList.map((element,index)=> (
                     <Tab
+                        key={`head ${element.label}`}
                         selected={selectIndex===index}
                         onClick={(event)=>setSelectIndex(index)}
                         label={element.label}
@@ -23,6 +24,7 @@ const TabMenu = () => {
             <div className='tabContent'>
                 {tabList.map((element,index)=> (
                     <TabContent
+                        key={`content ${element.label}`}
                         selected={selectIndex===index}
                         children={element.children}
                     />

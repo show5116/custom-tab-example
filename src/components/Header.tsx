@@ -47,8 +47,6 @@ const MenuSet: Record<menuName, menu> = {
 
 const Header = () => {
 
-
-
     const dispatch = useDispatch();
     const tabList = useSelector((state:RootState) => state.tabReducer);
 
